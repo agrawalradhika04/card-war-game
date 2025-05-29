@@ -1,2 +1,2 @@
 # card-war-game
-This project implements a two-player version of the card game War and a templated Bag class. 
+This project implements a two-player version of the card game War and a templated Bag class. The user specifies the initial hand size, and each round proceeds with both players drawing cards from their hands into a reward pile. The player with the higher card wins all cards in the reward pile. Ties result in a "war" where each player adds a penalty card, and the next round determines who takes the accumulated pile. The game continues until one player runs out of cards.
