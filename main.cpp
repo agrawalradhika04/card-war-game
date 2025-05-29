@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <ctime>
 #include <time.h>
+#include <algorithm>
 #include "bag.h"
 
 using namespace std;
@@ -18,6 +20,14 @@ int main(){
     cin >> hand_size;
 
     srand(time(0));
+
+    vector<int> deck;
+    for(int i = 2; i <= 14; i++){
+        for(int j = 0; j < 4; j++){
+            deck.push_back(i);
+        }
+    }
+    random_shuffle(deck.begin(), deck.end());
 
     
     Bag<int> Hand_P1; // Player 1 - Initial Hand 
