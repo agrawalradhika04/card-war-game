@@ -2,7 +2,6 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <time.h>
 #include <algorithm>
 #include "bag.h"
 
@@ -33,16 +32,14 @@ int main(){
     Bag<int> Hand_P1; // Player 1 - Initial Hand 
 
     for(int i = 0; i < hand_size; i++){
-        int element = rand() % 13 + 1;
-        Hand_P1.insert(element);
+        Hand_P1.insert(deck[i]);
     }
 
     
     Bag<int> Hand_P2; // Player 2 - Initial Hand
 
-    for(int i = 0; i < hand_size; i++){
-        int element = rand() % 13 + 1;
-        Hand_P2.insert(element);
+    for(int i = hand_size; i < 2 * hand_size; i++){
+        Hand_P2.insert(deck[i]);
     }
 
     Bag<int> reward_pile; // Reward Pile
